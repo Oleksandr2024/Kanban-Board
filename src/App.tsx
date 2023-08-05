@@ -1,35 +1,33 @@
+// import Header from "./components/Header";
+// import Section from "./components/Section";
+// import Count from "./components/Count";
+// import List from "./components/List";
+import CounterWithReducer from "./components/CounterWithReducer";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <Header title="Hello" />
+      <Section title="Advanced heading">Hello1</Section>
+      <Count setCount={setCount}>The count is {count}</Count>
+      <List
+        items={["Burger", "Pizza", "Burito"]}
+        render={(item: string) => <span>{item}</span>}
+      /> */}
+      <CounterWithReducer>
+        {(num: number) => <>Count is {num}</>}
+      </CounterWithReducer>
     </>
   );
 }
 
 export default App;
+
+{
+  /* <List
+        items={["Burger", "Pizza", "Watermelon"]}
+        render={(item: string) => <span>{item}</span>}
+      /> */
+}
